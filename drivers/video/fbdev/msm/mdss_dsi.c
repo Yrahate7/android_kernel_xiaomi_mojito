@@ -334,6 +334,15 @@ error:
 	return rc;
 }
 
+static int mdss_dsi_enable_hbm(struct mdss_dsi_ctrl_pdata *ctrl,
+				int enable)
+{
+	int rc = 0;
+	if (ctrl->set_hbm)
+		rc = ctrl->set_hbm(ctrl, enable);
+	return rc;
+}
+
 static int mdss_dsi_regulator_init(struct platform_device *pdev,
 		struct dsi_shared_data *sdata)
 {
@@ -3177,6 +3186,9 @@ static int mdss_dsi_event_handler(struct mdss_panel_data *pdata,
 		break;
 	case MDSS_EVENT_AVR_MODE:
 		mdss_dsi_avr_config(ctrl_pdata, (int)(unsigned long) arg);
+		break;
+	case MDSS_EVENT_ENABLE_HBM:
+		rc = mdss_dsi_enable_hbm(ctrl_pdata, (unsigned long) arg);
 		break;
 	case MDSS_EVENT_DSI_DYNAMIC_BITCLK:
 		if (ctrl_pdata->panel_data.panel_info.dynamic_bitclk) {
