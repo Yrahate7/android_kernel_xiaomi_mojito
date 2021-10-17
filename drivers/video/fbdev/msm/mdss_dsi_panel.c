@@ -2871,12 +2871,12 @@ static int mdss_panel_parse_hbm(struct device_node *np,
 	pinfo->hbm_state = 0;
 	pinfo->hbm_feature_enabled = 0;
 
-	data = of_get_property(np, "qcom,mdss-dsi-hbm-on-command", NULL);
+	data = of_get_property(np, "qcom,mdss-dsi-hbm2-on-command", NULL);
 	if (!data)
 		return 0;
 
 	rc = mdss_dsi_parse_dcs_cmds(np, &ctrl_pdata->hbm_on_cmds,
-				"qcom,mdss-dsi-hbm-on-command", NULL);
+				"qcom,mdss-dsi-hbm2-on-command", NULL);
 	if (rc) {
 		pr_err("%s : Failed parsing HBM on commands, rc = %d\n",
 			__func__, rc);
@@ -2884,7 +2884,7 @@ static int mdss_panel_parse_hbm(struct device_node *np,
 	}
 
 	rc = mdss_dsi_parse_dcs_cmds(np, &ctrl_pdata->hbm_off_cmds,
-				"qcom,mdss-dsi-hbm-off-command", NULL);
+				"qcom,mdss-dsi-dispparam-hbm-off-command", NULL);
 	if (rc) {
 		pr_err("%s : Failed parsing HBM off commands, rc = %d\n",
 			__func__, rc);
