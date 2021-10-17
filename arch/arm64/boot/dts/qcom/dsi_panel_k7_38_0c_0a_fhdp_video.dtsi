@@ -46,6 +46,11 @@
 		qcom,mdss-dsi-reset-sequence = <0 1>, <1 5>;
 		qcom,mdss-pan-physical-width-dimension = <67>;
 		qcom,mdss-pan-physical-height-dimension = <149>;
+		qcom,mdss-dsi-panel-hdr-enabled;
+		qcom,mdss-dsi-panel-hdr-color-primaries = <14500 15500 32000
+			17000 15500 30000 8000 3000>;
+		qcom,mdss-dsi-panel-peak-brightness = <4300000>;
+		qcom,mdss-dsi-panel-blackness-level = <3230>;
 		qcom,dispparam-enabled;
 
  		qcom,mdss-dsi-panel-jitter = <0x8 0xa>;
@@ -54,6 +59,7 @@
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2400>;
 				qcom,mdss-dsi-panel-framerate = <60>;
+				qcom,mdss-dsi-panel-clockrate = <1100000000>;
 				qcom,mdss-dsi-h-pulse-width = <16>;
 				qcom,mdss-dsi-h-back-porch = <68>;
 				qcom,mdss-dsi-h-front-porch = <92>;
