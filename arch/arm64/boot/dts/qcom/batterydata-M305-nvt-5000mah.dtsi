@@ -16,7 +16,7 @@
 	qcom,max-voltage-uv = <4450000>;
 	qcom,ffc-max-voltage-uv = <4470000>;
 	qcom,fg-cc-cv-threshold-uv = <4460000>;
-	qcom,fastchg-current-ma = <6000>;
+	qcom,fastchg-current-ma = <7500>;
 	qcom,batt-id-kohm = <100>;
 	qcom,battery-beta = <4250>;
 	qcom,battery-therm-kohm = <100>;
