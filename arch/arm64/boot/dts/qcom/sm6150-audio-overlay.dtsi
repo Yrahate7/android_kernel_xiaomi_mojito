@@ -170,16 +170,16 @@
 		qcom,tx-slave = <&wcd937x_tx_slave>;
 
 		cdc-vdd-ldo-rxtx-supply = <&L10A>;
-		qcom,cdc-vdd-ldo-rxtx-voltage = <1800000 1800000>;
-		qcom,cdc-vdd-ldo-rxtx-current = <25000>;
+		qcom,cdc-vdd-ldo-rxtx-voltage = <1829000 1829000>;
+		qcom,cdc-vdd-ldo-rxtx-current = <30000>;
 
 		cdc-vddpx-1-supply = <&L10A>;
-		qcom,cdc-vddpx-1-voltage = <1800000 1800000>;
-		qcom,cdc-vddpx-1-current = <10000>;
+		qcom,cdc-vddpx-1-voltage = <1829000 1829000>;
+		qcom,cdc-vddpx-1-current = <15000>;
 
 		cdc-vdd-buck-supply = <&L15A>;
-		qcom,cdc-vdd-buck-voltage = <1800000 1800000>;
-		qcom,cdc-vdd-buck-current = <650000>;
+		qcom,cdc-vdd-buck-voltage = <1950000 1950000>;
+		qcom,cdc-vdd-buck-current = <720000>;
 
 		cdc-vdd-mic-bias-supply = <&BOB>;
 		qcom,cdc-vdd-mic-bias-voltage = <3296000 3296000>;
